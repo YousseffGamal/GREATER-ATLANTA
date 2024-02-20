@@ -7,16 +7,16 @@ const DesktopOnePage = () => {
   return (
     <>
       <div className="bg-gradient  flex flex-col font-montserrat items-center justify-start mx-auto w-full">
-        <div className=" flex flex-col md:px-5 relative w-full">
+        <div className="  flex flex-col md:px-5 relative w-full">
           <div className="h-[846px] mx-auto w-full ">
           <div className="h-[846px] m-auto w-full relative">
-  <Img
-    className="h-[846px] m-auto object-cover w-full"
+  <Img 
+    className="go h-[846px] m-auto object-cover w-full"
     src="images/img_1084crestmontafter.png"
     alt="1084crestmontaf"
   />
   <div className="absolute bg-gradient1 flex flex-col h-max inset-y-[0] items-start justify-start left-[0] my-auto p-[131px] md:px-10 sm:px-5 w-[61%]">
-    <div className="flex flex-col gap-3.5 items-start justify-start my-[148px] w-auto sm:w-full">
+    <div className= " flex flex-col gap-3.5 items-start justify-start my-[148px] w-auto sm:w-full">
       <Text
         className="text-first md:left-[263px] absolute sm:text-[41.33px] md:text-[47.33px] text-[55.33px] text-gray-900"
         size="txtGilroyBold5533"
@@ -486,23 +486,29 @@ const DesktopOnePage = () => {
                       </>
                     </Text>
                     <Button
-                      className="cursor-pointer font-gilroymedium leading-[normal] min-w-[184px] text-[17.89px] text-center tracking-[0.72px]"
-                      shape="round"
-                      color="light_blue_800"
-                      size="sm"
-                      variant="fill"
-                    >
-                      Get Started
-                    </Button>
+    className="cursor-pointer font-gilroymedium leading-[normal] min-w-[184px] text-[17.89px] text-center tracking-[0.72px]"
+    shape="round"
+    color="light_blue_800"
+    size="sm"
+    variant="fill"
+    onClick={() => { 
+        const section = document.querySelector('.go');
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' }); 
+    }}
+>
+    Get Started
+</Button>
+
                     <Button
-                      className="cursor-pointer font-gilroymedium leading-[normal] min-w-[183px] text-[17.89px] text-center tracking-[0.72px]"
-                      shape="round"
-                      color="light_blue_800"
-                      size="sm"
-                      variant="outline"
-                    >
-                      Call Us
-                    </Button>
+    className="cursor-pointer font-gilroymedium leading-[normal] min-w-[183px] text-[17.89px] text-center tracking-[0.72px]"
+    shape="round"
+    color="light_blue_800"
+    size="sm"
+    variant="outline"
+    onClick={() => { window.location.href = 'tel:404-955-8541'; }}
+>
+    Call Us
+</Button>
                   </div>
                 </div>
                 <div className="footer bg-light_blue-800 flex flex-col items-center justify-start max-w-[1178px] mt-[117px] pb-[30px] pt-[70px] md:px-10 sm:px-5 px-[267px] rounded-tl-[25px] rounded-tr-[25px] shadow-bs3 w-full">
