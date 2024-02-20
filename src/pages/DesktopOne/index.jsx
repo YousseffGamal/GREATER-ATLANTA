@@ -4,6 +4,8 @@ import { Button, Img, List, Text } from "components";
 import DesktopOneStackrectangleten from "components/DesktopOneStackrectangleten";
 import './style.css'
 const DesktopOnePage = () => {
+
+  
   return (
     <>
       <div className="bg-gradient  flex flex-col font-montserrat items-center justify-start mx-auto w-full">
@@ -80,66 +82,66 @@ const DesktopOnePage = () => {
                     <div className="flex flex-col md:gap-10 gap-[70px] items-center justify-start w-full">
                       <div className="flex flex-col items-center justify-start w-full">
                         <div className="md:gap-5 gap-[70px] grid md:grid-cols-1 grid-cols-2 justify-center min-h-[auto] w-full">
-                          <div className="bg-indigo-50 flex flex-1 flex-col gap-[23px] h-[390px] md:h-auto items-center justify-start rounded-[30px] shadow-bs1 w-full">
-                            <Img
-                              className="h-[312px] sm:h-auto object-cover rounded-tl-[30px] rounded-tr-[30px] w-[416px] md:w-full"
-                              src="images/img_juxtaposegif1.png"
-                              alt="juxtaposegifOne"
-                            />
-                            <Text
-                              className="text-2xl md:text-[22px] text-black-900 sm:text-xl w-auto"
-                              size="txtGilroyMedium24"
-                            >
-                              Crestmont Lane
-                            </Text>
-                          </div>
-                          <div className="bg-indigo-50 flex flex-1 flex-col gap-[23px] h-[390px] md:h-auto items-center justify-start rounded-[30px] shadow-bs1 w-full">
-                            <Img
-                              className="h-[312px] sm:h-auto object-cover rounded-tl-[30px] rounded-tr-[30px] w-[416px] md:w-full"
-                              src="images/img_juxtaposegif1_312x416.png"
-                              alt="juxtaposegifOne"
-                            />
-                            <Text
-                              className="text-2xl md:text-[22px] text-black-900 sm:text-xl w-auto"
-                              size="txtGilroyMedium24"
-                            >
-                              Arbor Gate
-                            </Text>
-                          </div>
-                          <div className="bg-indigo-50 flex flex-1 flex-col gap-[23px] h-[390px] md:h-auto items-center justify-start rounded-[30px] shadow-bs1 w-full">
-                            <Img
-                              className="h-[312px] sm:h-auto object-cover rounded-tl-[30px] rounded-tr-[30px] sm:static w-[416px] md:w-full"
-                              src="images/img_juxtaposegif1.png"
-                              alt="juxtaposegifOne"
-                            />
-                            <Text
-                              className="text-2xl md:text-[22px] text-black-900 sm:text-xl w-auto"
-                              size="txtGilroyMedium24"
-                            >
-                              Stafford St SW
-                            </Text>
-                          </div>
-                          <div className="bg-indigo-50 flex flex-1 flex-col gap-[23px] h-[390px] md:h-auto items-center justify-start rounded-[30px] shadow-bs1 w-full">
-                            <Img
-                              className="h-[312px] sm:h-auto object-cover rounded-tl-[30px] rounded-tr-[30px] w-[416px] md:w-full"
-                              src="images/img_juxtaposegif1.png"
-                              alt="juxtaposegifOne"
-                            />
-                            <Text
-                              className="text-2xl md:text-[22px] text-black-900 sm:text-xl w-auto"
-                              size="txtGilroyMedium24"
-                            >
-                              Wingfoot PI
-                            </Text>
-                          </div>
+                        <div className="bg-indigo-50 flex flex-1 flex-col gap-[23px] h-[390px] md:h-auto items-center justify-start rounded-[30px] shadow-bs1 w-full">
+  <iframe frameborder="0" class="iiframe juxtapose h-[312px] sm:h-auto object-cover rounded-tl-[30px] rounded-tr-[30px] w-[416px] md:w-full" width="100%" height="100%" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=f98a6578-b980-11ee-9ddd-3f41531135b6"></iframe>
+  <Text className="text-2xl md:text-[22px] text-black-900 sm:text-xl w-auto" size="txtGilroyMedium24">
+    Crestmont Lane
+  </Text>
+</div>
+
+<div className="bg-indigo-50 flex flex-1 flex-col gap-[23px] h-[390px] md:h-auto items-center justify-start rounded-[30px] shadow-bs1 w-full">
+  <iframe
+    frameborder="0"
+    class="iiframe h-[312px] sm:h-auto object-cover rounded-tl-[30px] rounded-tr-[30px] w-[416px] md:w-full"
+    width="100%"
+    height="312px"
+    src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=9133ca7c-b981-11ee-9ddd-3f41531135b6"
+  ></iframe>
+  <Text
+    className="text-2xl md:text-[22px] text-black-900 sm:text-xl w-auto"
+    size="txtGilroyMedium24"
+  >
+    Arbor Gate
+  </Text>
+</div>
+<div className="bg-indigo-50 flex flex-1 flex-col gap-[23px] h-[390px] md:h-auto items-center justify-start rounded-[30px] shadow-bs1 w-full">
+  <iframe
+    frameborder="0"
+    class="iiframe  h-[400px] sm:h-auto object-cover rounded-tl-[30px] rounded-tr-[30px] w-[416px] md:w-full"
+    width="100%"
+    height="824"
+    src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=f2a1890c-b981-11ee-9ddd-3f41531135b6"
+  ></iframe>
+  <Text
+    className="text-2xl md:text-[22px] text-black-900 sm:text-xl w-auto"
+    size="txtGilroyMedium24"
+  >
+    Stafford St SW
+  </Text>
+</div>
+
+
+<div className="bg-indigo-50 flex flex-1 flex-col gap-[23px] h-[390px] md:h-auto items-center justify-start rounded-[30px] shadow-bs1 w-full">
+  <iframe
+    frameborder="0"
+    class="iiframe h-[312px] sm:h-auto object-cover rounded-tl-[30px] rounded-tr-[30px] w-[416px] md:w-full"
+    width="100%"
+    height="768"
+    src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=b089a0e0-b701-11ee-9ddd-3f41531135b6"
+  ></iframe>
+  <Text
+    className="text-2xl md:text-[22px] text-black-900 sm:text-xl w-auto"
+    size="txtGilroyMedium24"
+  >
+    Wingfoot PI
+  </Text>
+</div>
+
                         </div>
                       </div>
                       <div className="bg-indigo-50 flex flex-col gap-[23px] md:h-[312px] h-[390px] sm:h-auto items-center justify-start rounded-[30px] shadow-bs1 w-auto md:w-full">
-                        <Img
-                          className="h-[312px] sm:h-auto object-cover rounded-tl-[30px] rounded-tr-[30px] md:w-[101%] w-[416px] sm:w-full"
-                          src="images/img_juxtaposegif1.png"
-                          alt="juxtaposegifOne"
-                        />
+                        
+                        <iframe frameborder="0" class="iiframe h-[312px] sm:h-auto object-cover rounded-tl-[30px] rounded-tr-[30px] md:w-[101%] w-[416px] sm:w-full juxtapose" width="100%" height="605" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=bb33f75c-b981-11ee-9ddd-3f41531135b6"></iframe>
                         <Text
                           className="text-2xl md:text-[22px] text-black-900 sm:text-xl w-auto"
                           size="txtGilroyMedium24"
@@ -154,7 +156,7 @@ const DesktopOnePage = () => {
               <div className="flex flex-col items-center justify-start w-full">
                 <div className="flex flex-col gap-[35px] items-center justify-start w-auto md:w-full">
                   <Text
-                    className="md:text-4xl sm:text-[34px] text-[38px] text-black-900 text-center w-auto"
+                    className=" fff md:text-4xl sm:text-[34px] text-[38px] text-black-900 text-center w-auto"
                     size="txtGilroyBold38"
                   >
                     Greater Atlanta Home Buyers, LLC
@@ -354,8 +356,8 @@ const DesktopOnePage = () => {
                       </span>
                     </Text>
                     <div className="flex md:flex-col flex-row font-gilroysemibold md:gap-10 gap-[61.9px] items-start justify-center w-auto md:w-full">
-                      <div className="bg-teal-50 border-2 border-light_blue-800 border-solid flex flex-col gap-[4.42px] h-[193px] md:h-auto items-center justify-start md:left-[150px] sm:m-[] sm:ml-[46px] md:px-10 sm:px-5 px-[54.97px] py-[23.88px] md:relative rounded-bl-[25px] rounded-tr-[25px] w-[305px]">
-                        <div className="flex flex-col gap-[5px] items-center justify-start w-[83%] md:w-full">
+                      <div className="ra2y bg-teal-50 border-2 border-light_blue-800 border-solid flex flex-col gap-[4.42px] h-[193px] md:h-auto items-center justify-start md:left-[150px] sm:m-[] sm:ml-[46px] md:px-10 sm:px-5 px-[54.97px] py-[23.88px] md:relative rounded-bl-[25px] rounded-tr-[25px] w-[305px]">
+                        <div className=" flex flex-col gap-[5px] items-center justify-start w-[83%] md:w-full">
                           <Text
                             className="sm:text-[18.11px] md:text-[20.11px] text-[22.11px] text-black-900 text-center w-auto"
                             size="txtGilroySemiBold2211"
@@ -390,7 +392,7 @@ const DesktopOnePage = () => {
                         className="sm:flex-col flex-row md:gap-10 gap-[61px] grid md:grid-cols-1 grid-cols-2 w-[65%] md:w-full"
                         orientation="horizontal"
                       >
-                        <div className="bg-teal-50 border-2 border-light_blue-800 border-solid flex flex-col gap-[4.42px] h-[193px] md:h-auto items-center justify-start md:left-[150px] sm:m-[] sm:ml-[46px] md:px-10 sm:px-5 px-[54.97px] py-[37.14px] md:relative rounded-[25px] w-[305px]">
+                        <div className= "ra2yy bg-teal-50 border-2 border-light_blue-800 border-solid flex flex-col gap-[4.42px] h-[193px] md:h-auto items-center justify-start md:left-[150px] sm:m-[] sm:ml-[46px] md:px-10 sm:px-5 px-[54.97px] py-[37.14px] md:relative rounded-[25px] w-[305px]">
                           <Text
                             className="sm:text-[18.11px] md:text-[20.11px] text-[22.11px] text-black-900 text-center w-auto"
                             size="txtGilroySemiBold2211"
@@ -417,7 +419,7 @@ const DesktopOnePage = () => {
                             </Text>
                           </div>
                         </div>
-                        <div className="bg-teal-50 border-2 border-light_blue-800 border-solid flex flex-col gap-[4.42px] h-[193px] md:h-auto items-center justify-start md:left-[150px] sm:m-[] sm:ml-[46px] sm:mr-[] sm:p-[] md:px-10 sm:px-5 px-[54.97px] py-[17.69px] sm:py-[17.69px] md:relative rounded-bl-[25px] rounded-tr-[25px] w-[305px]">
+                        <div className="ra2yyy bg-teal-50 border-2 border-light_blue-800 border-solid flex flex-col gap-[4.42px] h-[193px] md:h-auto items-center justify-start md:left-[150px] sm:m-[] sm:ml-[46px] sm:mr-[] sm:p-[] md:px-10 sm:px-5 px-[54.97px] py-[17.69px] sm:py-[17.69px] md:relative rounded-bl-[25px] rounded-tr-[25px] w-[305px]">
                           <Text
                             className="sm:text-[18.11px] md:text-[20.11px] text-[22.11px] text-black-900 text-center w-auto"
                             size="txtGilroySemiBold2211"
@@ -513,9 +515,9 @@ const DesktopOnePage = () => {
                 </div>
                 <div className="footer bg-light_blue-800 flex flex-col items-center justify-start max-w-[1178px] mt-[117px] pb-[30px] pt-[70px] md:px-10 sm:px-5 px-[267px] rounded-tl-[25px] rounded-tr-[25px] shadow-bs3 w-full">
                   <div className="flex flex-col md:gap-10 gap-[60px] items-center justify-start w-auto md:w-full">
-                    <div className="flex md:flex-col flex-row font-gilroyregular md:gap-10 gap-[117px] items-start justify-center w-auto md:w-full">
+                    <div className="footer-iteam flex md:flex-col flex-row font-gilroyregular md:gap-10 gap-[117px] items-start justify-center w-auto md:w-full">
                       <Img
-                        className="h-[145px] md:h-auto object-cover w-[243px] sm:w-full"
+                        className="img-tp h-[145px] md:h-auto object-cover w-[243px] sm:w-full"
                         src="images/img_asset210.png"
                         alt="asset210"
                       />
@@ -542,7 +544,7 @@ const DesktopOnePage = () => {
                           </Text>
                        </div>
                         </div>
-                        <div className="flex sm:flex-col flex-row gap-[30px] items-center justify-start w-auto sm:w-full">
+                        <div className="social-items flex sm:flex-col flex-row gap-[30px] items-center justify-start w-auto sm:w-full">
                           <Img
                             className="h-[43px] md:h-auto object-cover w-[43px]"
                             src="images/img_asset5.png"
