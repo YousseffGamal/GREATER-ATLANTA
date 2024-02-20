@@ -1,0 +1,95 @@
+@media (max-width: 1050px){
+.md\:left-\[258px\] {
+    left: 50px;
+
+}
+
+
+.md\:left-\[263px\] {
+    left: 50px;
+}
+
+
+
+}
+
+
+@media (max-width: 550px) {
+.sm\:ml-\[46px\] {
+    margin-left: -144px;
+}
+}
+.sm\:text-4xl {
+    margin-bottom: 50px;
+}
+
+.text-container {
+    white-space: nowrap;
+  }
+  
+  @media (max-width: 640px) {
+    .text-container {
+      white-space: wrap; /* Reset white space for smaller screens */
+    }
+.footer{
+    margin-bottom: 350px;
+    position: relative;
+    top: 300px;
+}
+.contact{
+    position: relative;
+    top: 350px;
+}
+.testemonials{
+    position: relative;
+    top: 400px;
+}
+.services{
+    position: relative;
+    top: 400px
+}
+.imagess{
+    position: relative;
+    top: 10px
+}
+.sm\:text-\[34px\] {
+    position: relative;
+    top: 400px;
+}
+
+.sm\:text-\[41\.33px\] {
+    font-size: 32.33px;
+}
+.text-first{
+    position: absolute;
+margin-top: 450px !important;
+    font-size: 25.33px !important;
+}
+.text-second{
+    position: absolute !important;
+ left: 30px;
+ margin-top: 600px !important;
+
+ font-size: 15.33px !important;
+
+ }
+ .sm\:text-\[16\.1px\] {
+    font-size: 10.1px;
+    white-space: nowrap; /* Reset white space for smaller screens */
+
+}
+
+  }
+
+  .text-\[55\.33px\] {
+    font-size: 55.33px;
+    z-index: 9999 !important;
+margin-top: 150px;
+
+}
+.text-\[20\.1px\] {
+    z-index: 9999 !important;
+    font-size: 20.1px;
+    margin-top: 300px;
+  
+}

@@ -1,0 +1,20 @@
+@media (max-width: 640px) {
+
+.tryyyy{
+    
+
+}
+.two-inputs{
+    display: flex;
+    flex-direction: column;
+}
+.sss{
+    width: 350px !important;
+    margin-bottom:2000px !important;
+
+}
+.names{
+    width: 100% !important;
+    min-width: 308px !important;
+}
+}
