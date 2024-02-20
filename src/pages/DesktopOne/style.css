@@ -1,22 +1,22 @@
 @media (max-width: 1050px){
 .md\:left-\[258px\] {
-    left: 50px;
+    left: 50px !important;
 
 }
 
 
 .md\:left-\[263px\] {
-    left: 50px;
+    left: 50px !important;
+    white-space: nowrap !important;
+
 }
-
-
 
 }
 
 
 @media (max-width: 550px) {
 .sm\:ml-\[46px\] {
-    margin-left: -144px;
+    margin-left: -145px !important;
 }
 }
 .sm\:text-4xl {
@@ -50,7 +50,7 @@
 }
 .imagess{
     position: relative;
-    top: 10px
+    top:350px !important; 
 }
 .sm\:text-\[34px\] {
     position: relative;
@@ -62,12 +62,12 @@
 }
 .text-first{
     position: absolute;
-margin-top: 450px !important;
+margin-top: 530px !important;
     font-size: 25.33px !important;
 }
 .text-second{
     position: absolute !important;
- left: 30px;
+ right: 30px;
  margin-top: 600px !important;
 
  font-size: 15.33px !important;
@@ -93,3 +93,11 @@ margin-top: 150px;
     margin-top: 300px;
   
 }
+
+
+@media (max-width: 1050px) {
+    .md\:left-\[258px\] {
+        left: 58px !important;
+    }
+    
+    }
