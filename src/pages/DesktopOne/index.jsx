@@ -5,50 +5,50 @@ import DesktopOneStackrectangleten from "components/DesktopOneStackrectangleten"
 import './style.css'
 const DesktopOnePage = () => {
 
-  
+
   return (
     <>
       <div className="bg-gradient  flex flex-col font-montserrat items-center justify-start mx-auto w-full">
         <div className="  flex flex-col md:px-5 relative w-full">
           <div className="h-[846px] mx-auto w-full ">
-          <div className="h-[846px] m-auto w-full relative">
-  <Img 
-    className="go h-[846px] m-auto object-cover w-full"
-    src="images/img_1084crestmontafter.png"
-    alt="1084crestmontaf"
-  />
-  <div className="absolute bg-gradient1 flex flex-col h-max inset-y-[0] items-start justify-start left-[0] my-auto p-[131px] md:px-10 sm:px-5 w-[61%]">
-    <div className= " flex flex-col gap-3.5 items-start justify-start my-[148px] w-auto sm:w-full">
-      <Text
-        className="text-first md:left-[263px] absolute sm:text-[41.33px] md:text-[47.33px] text-[55.33px] text-gray-900"
-        size="txtGilroyBold5533"
-        style={{ top: '0', zIndex: '1', outline: 'none' }} // Add outline: 'none'
-      >
-        <>
-          Get a Cash Offer <br />
-          for Your House
-        </>
-      </Text>
-      <Text
-        className="text-second md:left-[258px] absolute sm:text-[16.1px] md:text-[18.1px] text-[20.1px] text-gray-900"
-        size="txtGilroyRegular201"
-        style={{ top: '0', zIndex: '1', outline: 'none' }} // Add outline: 'none'
-      >
-        <>
-          At Greater Atlanta Home Buyers, LLC, We Buy
-          <br />
-          Houses For Cash Throughout Georgia! No
-          <br />
-          Repairs. No Commission. Fill Out The
-          <br />
-          Form To Get Started On Your
-          <br />
-          FREE CASH OFFER Today!
-        </>
-      </Text>
-    </div>
-  </div>
-</div>
+            <div className="h-[846px] m-auto w-full relative">
+              <Img
+                className="go h-[846px] m-auto object-cover w-full"
+                src="images/img_1084crestmontafter.png"
+                alt="1084crestmontaf"
+              />
+              <div className="absolute bg-gradient1 flex flex-col h-max inset-y-[0] items-start justify-start left-[0] my-auto p-[131px] md:px-10 sm:px-5 w-[61%]">
+                <div className=" flex flex-col gap-3.5 items-start justify-start my-[148px] w-auto sm:w-full">
+                  <Text
+                    className="text-first md:left-[263px] absolute sm:text-[41.33px] md:text-[47.33px] text-[55.33px] text-gray-900"
+                    size="txtGilroyBold5533"
+                    style={{ top: '0', zIndex: '1', outline: 'none' }} // Add outline: 'none'
+                  >
+                    <>
+                      Get a Cash Offer <br />
+                      for Your House
+                    </>
+                  </Text>
+                  <Text
+                    className="text-second md:left-[258px] absolute sm:text-[16.1px] md:text-[18.1px] text-[20.1px] text-gray-900"
+                    size="txtGilroyRegular201"
+                    style={{ top: '0', zIndex: '1', outline: 'none' }} // Add outline: 'none'
+                  >
+                    <>
+                      At Greater Atlanta Home Buyers, LLC, We Buy
+                      <br />
+                      Houses For Cash Throughout Georgia! No
+                      <br />
+                      Repairs. No Commission. Fill Out The
+                      <br />
+                      Form To Get Started On Your
+                      <br />
+                      FREE CASH OFFER Today!
+                    </>
+                  </Text>
+                </div>
+              </div>
+            </div>
 
             <div className="absolute flex flex-col inset-x-[0] items-center justify-start mx-auto top-[0] w-auto md:w-full">
               <div className="flex flex-col items-start justify-start max-w-[1440px] md:px-10 sm:px-5 px-[131px] py-5 w-full">
@@ -82,66 +82,66 @@ const DesktopOnePage = () => {
                     <div className="flex flex-col md:gap-10 gap-[70px] items-center justify-start w-full">
                       <div className="flex flex-col items-center justify-start w-full">
                         <div className="md:gap-5 gap-[70px] grid md:grid-cols-1 grid-cols-2 justify-center min-h-[auto] w-full">
-                        <div className="bg-indigo-50 flex flex-1 flex-col gap-[23px] h-[390px] md:h-auto items-center justify-start rounded-[30px] shadow-bs1 w-full">
-  <iframe frameborder="0" class="iiframe juxtapose h-[312px] sm:h-auto object-cover rounded-tl-[30px] rounded-tr-[30px] w-[416px] md:w-full" width="100%" height="100%" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=f98a6578-b980-11ee-9ddd-3f41531135b6"></iframe>
-  <Text className="text-2xl md:text-[22px] text-black-900 sm:text-xl w-auto" size="txtGilroyMedium24">
-    Crestmont Lane
-  </Text>
-</div>
+                          <div className="bg-indigo-50 flex flex-1 flex-col gap-[23px] h-[390px] md:h-auto items-center justify-start rounded-[30px] shadow-bs1 w-full">
+                            <iframe frameBorder="0" className="iiframe juxtapose h-[312px] sm:h-auto object-cover rounded-tl-[30px] rounded-tr-[30px] w-[416px] md:w-full" width="100%" height="100%" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=f98a6578-b980-11ee-9ddd-3f41531135b6"></iframe>
+                            <Text className="text-2xl md:text-[22px] text-black-900 sm:text-xl w-auto" size="txtGilroyMedium24">
+                              Crestmont Lane
+                            </Text>
+                          </div>
 
-<div className="bg-indigo-50 flex flex-1 flex-col gap-[23px] h-[390px] md:h-auto items-center justify-start rounded-[30px] shadow-bs1 w-full">
-  <iframe
-    frameborder="0"
-    class="iiframe h-[312px] sm:h-auto object-cover rounded-tl-[30px] rounded-tr-[30px] w-[416px] md:w-full"
-    width="100%"
-    height="312px"
-    src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=9133ca7c-b981-11ee-9ddd-3f41531135b6"
-  ></iframe>
-  <Text
-    className="text-2xl md:text-[22px] text-black-900 sm:text-xl w-auto"
-    size="txtGilroyMedium24"
-  >
-    Arbor Gate
-  </Text>
-</div>
-<div className="bg-indigo-50 flex flex-1 flex-col gap-[23px] h-[390px] md:h-auto items-center justify-start rounded-[30px] shadow-bs1 w-full">
-  <iframe
-    frameborder="0"
-    class="iiframe  h-[400px] sm:h-auto object-cover rounded-tl-[30px] rounded-tr-[30px] w-[416px] md:w-full"
-    width="100%"
-    height="824"
-    src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=f2a1890c-b981-11ee-9ddd-3f41531135b6"
-  ></iframe>
-  <Text
-    className="text-2xl md:text-[22px] text-black-900 sm:text-xl w-auto"
-    size="txtGilroyMedium24"
-  >
-    Stafford St SW
-  </Text>
-</div>
+                          <div className="bg-indigo-50 flex flex-1 flex-col gap-[23px] h-[390px] md:h-auto items-center justify-start rounded-[30px] shadow-bs1 w-full">
+                            <iframe
+                              frameBorder="0"
+                              className="iiframe h-[312px] sm:h-auto object-cover rounded-tl-[30px] rounded-tr-[30px] w-[416px] md:w-full"
+                              width="100%"
+                              height="312px"
+                              src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=9133ca7c-b981-11ee-9ddd-3f41531135b6"
+                            ></iframe>
+                            <Text
+                              className="text-2xl md:text-[22px] text-black-900 sm:text-xl w-auto"
+                              size="txtGilroyMedium24"
+                            >
+                              Arbor Gate
+                            </Text>
+                          </div>
+                          <div className="bg-indigo-50 flex flex-1 flex-col gap-[23px] h-[390px] md:h-auto items-center justify-start rounded-[30px] shadow-bs1 w-full">
+                            <iframe
+                              frameBorder="0"
+                              className="iiframe  h-[400px] sm:h-auto object-cover rounded-tl-[30px] rounded-tr-[30px] w-[416px] md:w-full"
+                              width="100%"
+                              height="824"
+                              src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=f2a1890c-b981-11ee-9ddd-3f41531135b6"
+                            ></iframe>
+                            <Text
+                              className="text-2xl md:text-[22px] text-black-900 sm:text-xl w-auto"
+                              size="txtGilroyMedium24"
+                            >
+                              Stafford St SW
+                            </Text>
+                          </div>
 
 
-<div className="bg-indigo-50 flex flex-1 flex-col gap-[23px] h-[390px] md:h-auto items-center justify-start rounded-[30px] shadow-bs1 w-full">
-  <iframe
-    frameborder="0"
-    class="iiframe h-[312px] sm:h-auto object-cover rounded-tl-[30px] rounded-tr-[30px] w-[416px] md:w-full"
-    width="100%"
-    height="768"
-    src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=b089a0e0-b701-11ee-9ddd-3f41531135b6"
-  ></iframe>
-  <Text
-    className="text-2xl md:text-[22px] text-black-900 sm:text-xl w-auto"
-    size="txtGilroyMedium24"
-  >
-    Wingfoot PI
-  </Text>
-</div>
+                          <div className="bg-indigo-50 flex flex-1 flex-col gap-[23px] h-[390px] md:h-auto items-center justify-start rounded-[30px] shadow-bs1 w-full">
+                            <iframe
+                              frameBorder="0"
+                              className="iiframe h-[312px] sm:h-auto object-cover rounded-tl-[30px] rounded-tr-[30px] w-[416px] md:w-full"
+                              width="100%"
+                              height="768"
+                              src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=b089a0e0-b701-11ee-9ddd-3f41531135b6"
+                            ></iframe>
+                            <Text
+                              className="text-2xl md:text-[22px] text-black-900 sm:text-xl w-auto"
+                              size="txtGilroyMedium24"
+                            >
+                              Wingfoot PI
+                            </Text>
+                          </div>
 
                         </div>
                       </div>
                       <div className="bg-indigo-50 flex flex-col gap-[23px] md:h-[312px] h-[390px] sm:h-auto items-center justify-start rounded-[30px] shadow-bs1 w-auto md:w-full">
-                        
-                        <iframe frameborder="0" class="iiframe h-[312px] sm:h-auto object-cover rounded-tl-[30px] rounded-tr-[30px] md:w-[101%] w-[416px] sm:w-full juxtapose" width="100%" height="605" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=bb33f75c-b981-11ee-9ddd-3f41531135b6"></iframe>
+
+                        <iframe frameBorder="0" className="iiframe h-[312px] sm:h-auto object-cover rounded-tl-[30px] rounded-tr-[30px] md:w-[101%] w-[416px] sm:w-full juxtapose" width="100%" height="605" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=bb33f75c-b981-11ee-9ddd-3f41531135b6"></iframe>
                         <Text
                           className="text-2xl md:text-[22px] text-black-900 sm:text-xl w-auto"
                           size="txtGilroyMedium24"
@@ -392,7 +392,7 @@ const DesktopOnePage = () => {
                         className="sm:flex-col flex-row md:gap-10 gap-[61px] grid md:grid-cols-1 grid-cols-2 w-[65%] md:w-full"
                         orientation="horizontal"
                       >
-                        <div className= "ra2yy bg-teal-50 border-2 border-light_blue-800 border-solid flex flex-col gap-[4.42px] h-[193px] md:h-auto items-center justify-start md:left-[150px] sm:m-[] sm:ml-[46px] md:px-10 sm:px-5 px-[54.97px] py-[37.14px] md:relative rounded-[25px] w-[305px]">
+                        <div className="ra2yy bg-teal-50 border-2 border-light_blue-800 border-solid flex flex-col gap-[4.42px] h-[193px] md:h-auto items-center justify-start md:left-[150px] sm:m-[] sm:ml-[46px] md:px-10 sm:px-5 px-[54.97px] py-[37.14px] md:relative rounded-[25px] w-[305px]">
                           <Text
                             className="sm:text-[18.11px] md:text-[20.11px] text-[22.11px] text-black-900 text-center w-auto"
                             size="txtGilroySemiBold2211"
@@ -488,29 +488,29 @@ const DesktopOnePage = () => {
                       </>
                     </Text>
                     <Button
-    className="cursor-pointer font-gilroymedium leading-[normal] min-w-[184px] text-[17.89px] text-center tracking-[0.72px]"
-    shape="round"
-    color="light_blue_800"
-    size="sm"
-    variant="fill"
-    onClick={() => { 
-        const section = document.querySelector('.go');
-        section.scrollIntoView({ behavior: 'smooth', block: 'start' }); 
-    }}
->
-    Get Started
-</Button>
+                      className="cursor-pointer font-gilroymedium leading-[normal] min-w-[184px] text-[17.89px] text-center tracking-[0.72px]"
+                      shape="round"
+                      color="light_blue_800"
+                      size="sm"
+                      variant="fill"
+                      onClick={() => {
+                        const section = document.querySelector('.go');
+                        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      }}
+                    >
+                      Get Started
+                    </Button>
 
                     <Button
-    className="cursor-pointer font-gilroymedium leading-[normal] min-w-[183px] text-[17.89px] text-center tracking-[0.72px]"
-    shape="round"
-    color="light_blue_800"
-    size="sm"
-    variant="outline"
-    onClick={() => { window.location.href = 'tel:404-955-8541'; }}
->
-    Call Us
-</Button>
+                      className="cursor-pointer font-gilroymedium leading-[normal] min-w-[183px] text-[17.89px] text-center tracking-[0.72px]"
+                      shape="round"
+                      color="light_blue_800"
+                      size="sm"
+                      variant="outline"
+                      onClick={() => { window.location.href = 'tel:404-955-8541'; }}
+                    >
+                      Call Us
+                    </Button>
                   </div>
                 </div>
                 <div className="footer bg-light_blue-800 flex flex-col items-center justify-start max-w-[1178px] mt-[117px] pb-[30px] pt-[70px] md:px-10 sm:px-5 px-[267px] rounded-tl-[25px] rounded-tr-[25px] shadow-bs3 w-full">
@@ -522,27 +522,27 @@ const DesktopOnePage = () => {
                         alt="asset210"
                       />
                       <div className="flex flex-col gap-[21px] items-start justify-start w-auto sm:w-full">
-                      <div className="flex flex-col items-start justify-start w-auto sm:w-full">
-                      <div class="text-container">
-                       <Text
-                            className="text-[17px] text-white-A700"
-                            size="txtGilroyRegular17"
-                          >
-                            <>
-                              Greater Atlanta Home Buyers, LLC is a real estate
-                              investment company
-                              <br />
-                              that buys homes throughout North Georgia. Many
-                              sellers opt to do
-                              <br />
-                              business with us because we pay cash; can close
-                              quickly; never
-                              <br />
-                              charge a commission; & we pay all normal closing
-                              costs.
-                            </>
-                          </Text>
-                       </div>
+                        <div className="flex flex-col items-start justify-start w-auto sm:w-full">
+                          <div className="text-container">
+                            <Text
+                              className="text-[17px] text-white-A700"
+                              size="txtGilroyRegular17"
+                            >
+                              <>
+                                Greater Atlanta Home Buyers, LLC is a real estate
+                                investment company
+                                <br />
+                                that buys homes throughout North Georgia. Many
+                                sellers opt to do
+                                <br />
+                                business with us because we pay cash; can close
+                                quickly; never
+                                <br />
+                                charge a commission; & we pay all normal closing
+                                costs.
+                              </>
+                            </Text>
+                          </div>
                         </div>
                         <div className="social-items flex sm:flex-col flex-row gap-[30px] items-center justify-start w-auto sm:w-full">
                           <Img

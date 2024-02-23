@@ -5,6 +5,11 @@ const DesktopOneStackrectangleten = (props) => {
   const [propertyAddress, setPropertyAddress] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [year, setYear] = useState("");
+  const [reasonForSelling, setReasonForSelling] = useState("");
+  const [extraInfo, setExtraInfo] = useState("");
   const [formIndex, setFormIndex] = useState(0);
   const contentRef = useRef(null);
   const [backgroundWidth, setBackgroundWidth] = useState("15%");
@@ -27,7 +32,7 @@ const DesktopOneStackrectangleten = (props) => {
   }, [formIndex]);
   const [isDropdownOpenBedrooms, setIsDropdownOpenBedrooms] = useState(false);
   const [selectedOptionBedrooms, setSelectedOptionBedrooms] = useState('');
-  
+
   const [isDropdownOpenBathrooms, setIsDropdownOpenBathrooms] = useState(false);
   const [selectedOptionBathrooms, setSelectedOptionBathrooms] = useState('');
 
@@ -52,7 +57,7 @@ const DesktopOneStackrectangleten = (props) => {
 
   const [isDropdownOpenCondition, setIsDropdownOpenCondition] = useState(false);
   const [selectedOptionCondition, setSelectedOptionCondition] = useState('');
-  
+
   const toggleDropdownCondition = () => {
     setIsDropdownOpenCondition(!isDropdownOpenCondition);
   };
@@ -64,7 +69,7 @@ const DesktopOneStackrectangleten = (props) => {
 
   const [isDropdownOpenSellTiming, setIsDropdownOpenSellTiming] = useState(false);
   const [selectedOptionSellTiming, setSelectedOptionSellTiming] = useState('');
-  
+
   const toggleDropdownSellTiming = () => {
     setIsDropdownOpenSellTiming(!isDropdownOpenSellTiming);
   };
@@ -73,6 +78,90 @@ const DesktopOneStackrectangleten = (props) => {
     setSelectedOptionSellTiming(option);
     setIsDropdownOpenSellTiming(false);
   };
+
+
+  const addLead = async () => {
+    if (propertyAddress === "" || email === "" || phone === "" || firstName === "" || lastName === "") {
+      alert("Please fill all the required fields!")
+      return;
+    }
+    const lead = {
+      name: `${firstName} ${lastName}`,
+      contacts: [
+        {
+          emails: [
+            {
+              type: "office",
+              email: email
+            }
+          ],
+          phones: [
+            {
+              type: "office",
+              phone: phone
+            }
+          ]
+        }
+      ],
+      "custom.cf_Jqi41RIvDLMII7pomnWvbgXHiJ3sLbgQL6wA2MId2s1": `Number of Bedrooms : ${selectedOptionBedrooms}, Number of Bathrooms : ${selectedOptionBathrooms}, Year the property was built : ${year}, Condition : ${selectedOptionCondition}, Reason For Selling : ${reasonForSelling}, Selling time : ${selectedOptionSellTiming}, Extra info : ${extraInfo}`,
+      addresses: [
+        {
+          address_1: propertyAddress
+        }
+      ]
+    }
+    try {
+      const response = await fetch('http://localhost:3000/api/lead', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(lead)
+      })
+      if (response.ok === true) {
+        alert('Your data has been submitted successfully!');
+        setFirstName('');
+        setLastName('');
+        setEmail('');
+        setPhone('');
+        setPropertyAddress('');
+        setYear('');
+        setReasonForSelling('');
+        setExtraInfo('');
+        setSelectedOptionBedrooms('');
+        setSelectedOptionBathrooms('');
+        setSelectedOptionCondition('');
+        setSelectedOptionSellTiming('');
+      }
+      else {
+        alert('There was an error submitting your data. Please try again later.');
+      }
+    } catch (error) {
+      console.error('Error creating lead:', error);
+    }
+  }
+  const handleEmailValidation = () => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert('Please enter a valid email address.');
+      setEmail(''); // Clearing the email field if invalid
+    }
+  };
+
+
+  const handlePhoneChange = (value) => {
+    const sanitizedValue = value.replace(/[^0-9+]/g, '');
+    setPhone(sanitizedValue);
+  };
+
+  const handlePhoneValidation = () => {
+    if (!/^[0-9+]*$/.test(phone)) {
+      alert('Please enter a valid phone number.');
+      setPhone('');
+    }
+  };
+
+
   return (
     <>
       <div className={props.className}>
@@ -90,14 +179,14 @@ const DesktopOneStackrectangleten = (props) => {
                 {props?.sellmyhousetext}
               </Text>
             </div>
-            <div  className="s-from flex flex-col gap-[22px] items-center justify-start w-full">
+            <div className="s-from flex flex-col gap-[22px] items-center justify-start w-full">
               {formIndex === 0 && (
                 <>
                   <input
                     type="text"
                     style={{ backgroundColor: "rgba(234, 235, 243, 0.8)" }}
                     className="!text-gray-800 cursor-pointer font-medium font-montserrat leading-[normal] rounded-lg text-[13.84px] text-center w-full"
-                    value={propertyAddress}
+                    value={propertyAddress || ''}
                     onChange={(e) => setPropertyAddress(e.target.value)}
                     placeholder={props?.propertyaddressbutton}
                   />
@@ -105,325 +194,337 @@ const DesktopOneStackrectangleten = (props) => {
                     type="text"
                     style={{ backgroundColor: "rgba(234, 235, 243, 0.8)" }}
                     className="!text-gray-800 cursor-pointer font-medium font-montserrat leading-[normal] rounded-lg text-[13.84px] text-center w-full"
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
+                    value={phone || ''}
+                    onChange={(e) => handlePhoneChange(e.target.value)}
                     placeholder={props?.phonebutton}
+                    onBlur={handlePhoneValidation} // Added onBlur event for validation
                   />
                   <input
                     type="text"
                     style={{ backgroundColor: "rgba(234, 235, 243, 0.8)" }}
                     className="!text-gray-800 cursor-pointer font-medium font-montserrat leading-[normal] rounded-lg text-[13.84px] text-center w-full"
-                    value={email}
+                    value={email || ''}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder={props?.emailbutton}
+                    onBlur={handleEmailValidation} // Added onBlur event for validation
                   />
                 </>
               )}
               {formIndex === 1 && (
                 <>
-       
-       <div className="two-inputs" style={{ display: 'flex', gap: '10px' }}>
-  <input
-    type="text"
-    style={{ backgroundColor: "rgba(234, 235, 243, 0.8)", width: '50%', minWidth: '270px' }}
-    className="names !text-gray-800 cursor-pointer font-medium font-montserrat leading-[normal] rounded-lg text-[13.84px] text-center flex-1"
-    placeholder="First Name"
-  />
-  <input
-    type="text"
-    style={{ backgroundColor: "rgba(234, 235, 243, 0.8)", width: '50%', minWidth: '270px' }}
-    className="names !text-gray-800 cursor-pointer font-medium font-montserrat leading-[normal] rounded-lg text-[13.84px] text-center flex-1"
-    placeholder="Last Name"
-  />
-</div>
 
-<div style={{ position: 'relative', width: '100%' }}>
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-          }}
-        >
-          <input
-            type="text"
-            style={{
-              backgroundColor: 'rgba(234, 235, 243, 0.8)',
-              width: '100%',
-              cursor: 'pointer',
-            }}
-            className="!text-gray-800 font-medium font-montserrat leading-[normal] rounded-lg text-[13.84px] text-center"
-            placeholder="Number of Bedrooms"
-            onFocus={toggleDropdownBedrooms}
-            readOnly // Prevents typing
-            value={selectedOptionBedrooms || ''}
-          />
-          <div
-            style={{
-              position: 'absolute',
-              right: '10px',
-              top: '50%',
-              transform: 'translateY(-50%)',
-              cursor: 'pointer',
-            }}
-            onClick={toggleDropdownBedrooms}
-          >
-            {/* Dropdown icon */}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              className="bi bi-caret-down-fill"
-              viewBox="0 0 16 16"
-            >
-              <path d="M8 11.225l-4.408-5.15C3.242 5.705 3.74 5 4.527 5h6.946c.787 0 1.285.705.935 1.075L8 11.225z" />
-            </svg>
-          </div>
-        </div>
-        {isDropdownOpenBedrooms && (
-          <div
-            style={{
-              position: 'absolute',
-              top: 'calc(100% + 5px)',
-              left: 0,
-              backgroundColor: 'rgba(234, 235, 243, 0.8)',
-              width: '100%',
-              padding: '5px',
-              borderRadius: '5px',
-              zIndex: 1,
-            }}
-          >
-            {/* Dropdown content */}
-            <ul >
-              <li style={{textAlign:'center',marginTop:'5px'}} onClick={() => handleOptionClickBedrooms('1')}> 1</li>
-              <li style={{textAlign:'center',marginTop:'5px'}} onClick={() => handleOptionClickBedrooms('2')}> 2</li>
-              <li style={{textAlign:'center',marginTop:'5px'}} onClick={() => handleOptionClickBedrooms('3')}> 3</li>
-              <li style={{textAlign:'center',marginTop:'5px'}} onClick={() => handleOptionClickBedrooms('4')}> 3</li>
-              <li style={{textAlign:'center',marginTop:'5px'}} onClick={() => handleOptionClickBedrooms('+5')}> +5</li>
-            </ul>
-          </div>
-        )}
-      </div>
-      <div style={{ position: 'relative', width: '100%' }}>
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-          }}
-        >
-          <input
-            type="text"
-            style={{
-              backgroundColor: 'rgba(234, 235, 243, 0.8)',
-              width: '100%',
-              cursor: 'pointer',
-            }}
-            className="!text-gray-800 font-medium font-montserrat leading-[normal] rounded-lg text-[13.84px] text-center"
-            placeholder="Number of Bathrooms"
-            onFocus={toggleDropdownBathrooms}
-            readOnly // Prevents typing
-            value={selectedOptionBathrooms || ''}
-          />
-          <div
-            style={{
-              position: 'absolute',
-              right: '10px',
-              top: '50%',
-              transform: 'translateY(-50%)',
-              cursor: 'pointer',
-            }}
-            onClick={toggleDropdownBathrooms}
-          >
-            {/* Dropdown icon */}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              className="bi bi-caret-down-fill"
-              viewBox="0 0 16 16"
-            >
-              <path d="M8 11.225l-4.408-5.15C3.242 5.705 3.74 5 4.527 5h6.946c.787 0 1.285.705.935 1.075L8 11.225z" />
-            </svg>
-          </div>
-        </div>
-        {isDropdownOpenBathrooms && (
-          <div
-            style={{
-              position: 'absolute',
-              top: 'calc(100% + 5px)',
-              left: 0,
-              backgroundColor: 'rgba(234, 235, 243, 0.8)',
-              width: '100%',
-              padding: '5px',
-              borderRadius: '5px',
-              zIndex: 1,
-            }}
-          >
-            {/* Dropdown content */}
-            <ul >
-              <li style={{textAlign:'center',marginTop:'5px'}} onClick={() => handleOptionClickBathrooms('1')}> 1</li>
-              <li style={{textAlign:'center',marginTop:'5px'}} onClick={() => handleOptionClickBathrooms('2')}> 2</li>
-              <li style={{textAlign:'center',marginTop:'5px'}} onClick={() => handleOptionClickBathrooms('3')}> 3</li>
-              <li style={{textAlign:'center',marginTop:'5px'}} onClick={() => handleOptionClickBathrooms('4')}> 3</li>
-              <li style={{textAlign:'center',marginTop:'5px'}} onClick={() => handleOptionClickBathrooms('+5')}> +5</li>
-            </ul>
-          </div>
-        )}
-      </div>
-    <input
-      type="text"
-      style={{ backgroundColor: "rgba(234, 235, 243, 0.8)" }}
-      className="!text-gray-800 cursor-pointer font-medium font-montserrat leading-[normal] rounded-lg text-[13.84px] text-center w-full"
-      placeholder="The year The Propert Was Built"
-    />
-   <div style={{ position: 'relative', width: '100%' }}>
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-        }}
-      >
-        <input
-          type="text"
-          style={{
-            backgroundColor: 'rgba(234, 235, 243, 0.8)',
-            width: '100%',
-            cursor: 'pointer',
-          }}
-          className="!text-gray-800 font-medium font-montserrat leading-[normal] rounded-lg text-[13.84px] text-center"
-          placeholder="Condition"
-          onFocus={toggleDropdownCondition}
-          readOnly // Prevents typing
-          value={selectedOptionCondition || ''}
-        />
-        <div
-          style={{
-            position: 'absolute',
-            right: '10px',
-            top: '50%',
-            transform: 'translateY(-50%)',
-            cursor: 'pointer',
-          }}
-          onClick={toggleDropdownCondition}
-        >
-          {/* Dropdown icon */}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            className="bi bi-caret-down-fill"
-            viewBox="0 0 16 16"
-          >
-            <path d="M8 11.225l-4.408-5.15C3.242 5.705 3.74 5 4.527 5h6.946c.787 0 1.285.705.935 1.075L8 11.225z" />
-          </svg>
-        </div>
-      </div>
-      {isDropdownOpenCondition && (
-        <div
-          style={{
-            position: 'absolute',
-            top: 'calc(100% + 5px)',
-            left: 0,
-            backgroundColor: 'rgba(234, 235, 243, 0.8)',
-            width: '100%',
-            padding: '5px',
-            borderRadius: '5px',
-            zIndex: 1,
-          }}
-        >
-          {/* Dropdown content */}
-          <ul >
-            <li style={{textAlign:'center',marginTop:'5px'}} onClick={() => handleOptionClickCondition('New')}> Its needs a lot of work</li>
-            <li style={{textAlign:'center',marginTop:'5px'}} onClick={() => handleOptionClickCondition('Used')}> it needs some work</li>
-            <li style={{textAlign:'center',marginTop:'5px'}} onClick={() => handleOptionClickCondition('Refurbished')}> it's in good condition</li>
-            <li style={{textAlign:'center',marginTop:'5px'}} onClick={() => handleOptionClickCondition('great')}> it's in great condition</li>
+                  <div className="two-inputs" style={{ display: 'flex', gap: '10px' }}>
+                    <input
+                      type="text"
+                      style={{ backgroundColor: "rgba(234, 235, 243, 0.8)", width: '50%', minWidth: '270px' }}
+                      className="names !text-gray-800 cursor-pointer font-medium font-montserrat leading-[normal] rounded-lg text-[13.84px] text-center flex-1"
+                      placeholder="First Name"
+                      onChange={(e) => setFirstName(e.target.value)}
+                      value={firstName || ''}
+                    />
+                    <input
+                      type="text"
+                      style={{ backgroundColor: "rgba(234, 235, 243, 0.8)", width: '50%', minWidth: '270px' }}
+                      className="names !text-gray-800 cursor-pointer font-medium font-montserrat leading-[normal] rounded-lg text-[13.84px] text-center flex-1"
+                      placeholder="Last Name"
+                      onChange={(e) => setLastName(e.target.value)}
+                      value={lastName || ''}
+                    />
+                  </div>
 
-          </ul>
-        </div>
-      )}
-    </div>
-    <input
-      type="text"
-      style={{ backgroundColor: "rgba(234, 235, 243, 0.8)" }}
-      className="!text-gray-800 cursor-pointer font-medium font-montserrat leading-[normal] rounded-lg text-[13.84px] text-center w-full"
-      placeholder="Reason For Seeling"
-    />
-  
-    <div style={{ position: 'relative', width: '100%' }}>
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-        }}
-      >
-        <input
-          type="text"
-          style={{
-            backgroundColor: 'rgba(234, 235, 243, 0.8)',
-            width: '100%',
-            cursor: 'pointer',
-          }}
-          className="!text-gray-800 font-medium font-montserrat leading-[normal] rounded-lg text-[13.84px] text-center"
-          placeholder="How Soon Will You Like To Sell"
-          onFocus={toggleDropdownSellTiming}
-          readOnly // Prevents typing
-          value={selectedOptionSellTiming || ''}
-        />
-        <div
-          style={{
-            position: 'absolute',
-            right: '10px',
-            top: '50%',
-            transform: 'translateY(-50%)',
-            cursor: 'pointer',
-          }}
-          onClick={toggleDropdownSellTiming}
-        >
-          {/* Dropdown icon */}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            className="bi bi-caret-down-fill"
-            viewBox="0 0 16 16"
-          >
-            <path d="M8 11.225l-4.408-5.15C3.242 5.705 3.74 5 4.527 5h6.946c.787 0 1.285.705.935 1.075L8 11.225z" />
-          </svg>
-        </div>
-      </div>
-      {isDropdownOpenSellTiming && (
-        <div
-          style={{
-            position: 'absolute',
-            top: 'calc(100% + 5px)',
-            left: 0,
-            backgroundColor: 'rgba(234, 235, 243, 0.8)',
-            width: '100%',
-            padding: '5px',
-            borderRadius: '5px',
-            zIndex: 1,
-          }}
-        >
-          {/* Dropdown content */}
-          <ul >
-            <li style={{textAlign:'center',marginTop:'5px'}} onClick={() => handleOptionClickSellTiming('Within a week')}> Immediately</li>
-            <li style={{textAlign:'center',marginTop:'5px'}} onClick={() => handleOptionClickSellTiming('Within a month')}> 1-3 months</li>
-            <li style={{textAlign:'center',marginTop:'5px'}} onClick={() => handleOptionClickSellTiming('Within three months')}> 3-6 minths</li>
-            <li style={{textAlign:'center',marginTop:'5px'}} onClick={() => handleOptionClickSellTiming('not sure')}> not sure</li>
+                  <div style={{ position: 'relative', width: '100%' }}>
+                    <div
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <input
+                        type="text"
+                        style={{
+                          backgroundColor: 'rgba(234, 235, 243, 0.8)',
+                          width: '100%',
+                          cursor: 'pointer',
+                        }}
+                        className="!text-gray-800 font-medium font-montserrat leading-[normal] rounded-lg text-[13.84px] text-center"
+                        placeholder="Number of Bedrooms"
+                        onFocus={toggleDropdownBedrooms}
+                        readOnly // Prevents typing
+                        value={selectedOptionBedrooms || ''}
+                      />
+                      <div
+                        style={{
+                          position: 'absolute',
+                          right: '10px',
+                          top: '50%',
+                          transform: 'translateY(-50%)',
+                          cursor: 'pointer',
+                        }}
+                        onClick={toggleDropdownBedrooms}
+                      >
+                        {/* Dropdown icon */}
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          className="bi bi-caret-down-fill"
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M8 11.225l-4.408-5.15C3.242 5.705 3.74 5 4.527 5h6.946c.787 0 1.285.705.935 1.075L8 11.225z" />
+                        </svg>
+                      </div>
+                    </div>
+                    {isDropdownOpenBedrooms && (
+                      <div
+                        style={{
+                          position: 'absolute',
+                          top: 'calc(100% + 5px)',
+                          left: 0,
+                          backgroundColor: 'rgba(234, 235, 243, 0.8)',
+                          width: '100%',
+                          padding: '5px',
+                          borderRadius: '5px',
+                          zIndex: 1,
+                        }}
+                      >
+                        {/* Dropdown content */}
+                        <ul >
+                          <li style={{ textAlign: 'center', marginTop: '5px' }} onClick={() => handleOptionClickBedrooms('1')}> 1</li>
+                          <li style={{ textAlign: 'center', marginTop: '5px' }} onClick={() => handleOptionClickBedrooms('2')}> 2</li>
+                          <li style={{ textAlign: 'center', marginTop: '5px' }} onClick={() => handleOptionClickBedrooms('3')}> 3</li>
+                          <li style={{ textAlign: 'center', marginTop: '5px' }} onClick={() => handleOptionClickBedrooms('4')}> 4</li>
+                          <li style={{ textAlign: 'center', marginTop: '5px' }} onClick={() => handleOptionClickBedrooms('+5')}> +5</li>
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                  <div style={{ position: 'relative', width: '100%' }}>
+                    <div
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <input
+                        type="text"
+                        style={{
+                          backgroundColor: 'rgba(234, 235, 243, 0.8)',
+                          width: '100%',
+                          cursor: 'pointer',
+                        }}
+                        className="!text-gray-800 font-medium font-montserrat leading-[normal] rounded-lg text-[13.84px] text-center"
+                        placeholder="Number of Bathrooms"
+                        onFocus={toggleDropdownBathrooms}
+                        readOnly // Prevents typing
+                        value={selectedOptionBathrooms || ''}
+                      />
+                      <div
+                        style={{
+                          position: 'absolute',
+                          right: '10px',
+                          top: '50%',
+                          transform: 'translateY(-50%)',
+                          cursor: 'pointer',
+                        }}
+                        onClick={toggleDropdownBathrooms}
+                      >
+                        {/* Dropdown icon */}
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          className="bi bi-caret-down-fill"
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M8 11.225l-4.408-5.15C3.242 5.705 3.74 5 4.527 5h6.946c.787 0 1.285.705.935 1.075L8 11.225z" />
+                        </svg>
+                      </div>
+                    </div>
+                    {isDropdownOpenBathrooms && (
+                      <div
+                        style={{
+                          position: 'absolute',
+                          top: 'calc(100% + 5px)',
+                          left: 0,
+                          backgroundColor: 'rgba(234, 235, 243, 0.8)',
+                          width: '100%',
+                          padding: '5px',
+                          borderRadius: '5px',
+                          zIndex: 1,
+                        }}
+                      >
+                        {/* Dropdown content */}
+                        <ul >
+                          <li style={{ textAlign: 'center', marginTop: '5px' }} onClick={() => handleOptionClickBathrooms('1')}> 1</li>
+                          <li style={{ textAlign: 'center', marginTop: '5px' }} onClick={() => handleOptionClickBathrooms('2')}> 2</li>
+                          <li style={{ textAlign: 'center', marginTop: '5px' }} onClick={() => handleOptionClickBathrooms('3')}> 3</li>
+                          <li style={{ textAlign: 'center', marginTop: '5px' }} onClick={() => handleOptionClickBathrooms('4')}> 4</li>
+                          <li style={{ textAlign: 'center', marginTop: '5px' }} onClick={() => handleOptionClickBathrooms('+5')}> +5</li>
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                  <input
+                    type="text"
+                    style={{ backgroundColor: "rgba(234, 235, 243, 0.8)" }}
+                    className="!text-gray-800 cursor-pointer font-medium font-montserrat leading-[normal] rounded-lg text-[13.84px] text-center w-full"
+                    placeholder="The year the property was built"
+                    onChange={(e) => setYear(e.target.value)}
+                    value={year || ''}
+                  />
+                  <div style={{ position: 'relative', width: '100%' }}>
+                    <div
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <input
+                        type="text"
+                        style={{
+                          backgroundColor: 'rgba(234, 235, 243, 0.8)',
+                          width: '100%',
+                          cursor: 'pointer',
+                        }}
+                        className="!text-gray-800 font-medium font-montserrat leading-[normal] rounded-lg text-[13.84px] text-center"
+                        placeholder="Condition"
+                        onFocus={toggleDropdownCondition}
+                        readOnly // Prevents typing
+                        value={selectedOptionCondition || ''}
+                      />
+                      <div
+                        style={{
+                          position: 'absolute',
+                          right: '10px',
+                          top: '50%',
+                          transform: 'translateY(-50%)',
+                          cursor: 'pointer',
+                        }}
+                        onClick={toggleDropdownCondition}
+                      >
+                        {/* Dropdown icon */}
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          className="bi bi-caret-down-fill"
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M8 11.225l-4.408-5.15C3.242 5.705 3.74 5 4.527 5h6.946c.787 0 1.285.705.935 1.075L8 11.225z" />
+                        </svg>
+                      </div>
+                    </div>
+                    {isDropdownOpenCondition && (
+                      <div
+                        style={{
+                          position: 'absolute',
+                          top: 'calc(100% + 5px)',
+                          left: 0,
+                          backgroundColor: 'rgba(234, 235, 243, 0.8)',
+                          width: '100%',
+                          padding: '5px',
+                          borderRadius: '5px',
+                          zIndex: 1,
+                        }}
+                      >
+                        {/* Dropdown content */}
+                        <ul >
+                          <li style={{ textAlign: 'center', marginTop: '5px' }} onClick={() => handleOptionClickCondition('New')}> Its needs a lot of work</li>
+                          <li style={{ textAlign: 'center', marginTop: '5px' }} onClick={() => handleOptionClickCondition('Used')}> it needs some work</li>
+                          <li style={{ textAlign: 'center', marginTop: '5px' }} onClick={() => handleOptionClickCondition('Refurbished')}> it's in good condition</li>
+                          <li style={{ textAlign: 'center', marginTop: '5px' }} onClick={() => handleOptionClickCondition('great')}> it's in great condition</li>
 
-          </ul>
-        </div>
-      )}
-    </div>
-       <input
-      type="text"
-      style={{ backgroundColor: "rgba(234, 235, 243, 0.8)" }}
-      className="!text-gray-800 cursor-pointer font-medium font-montserrat leading-[normal] rounded-lg text-[13.84px] text-center w-full"
-      placeholder="Is There Anything Else You'd Like TO Tell Us?"
-    />
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                  <input
+                    type="text"
+                    style={{ backgroundColor: "rgba(234, 235, 243, 0.8)" }}
+                    className="!text-gray-800 cursor-pointer font-medium font-montserrat leading-[normal] rounded-lg text-[13.84px] text-center w-full"
+                    placeholder="Reason for selling"
+                    onChange={(e) => setReasonForSelling(e.target.value)}
+                    value={reasonForSelling || ''}
+                  />
+
+                  <div style={{ position: 'relative', width: '100%' }}>
+                    <div
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <input
+                        type="text"
+                        style={{
+                          backgroundColor: 'rgba(234, 235, 243, 0.8)',
+                          width: '100%',
+                          cursor: 'pointer',
+                        }}
+                        className="!text-gray-800 font-medium font-montserrat leading-[normal] rounded-lg text-[13.84px] text-center"
+                        placeholder="How Soon Will You Like To Sell"
+                        onFocus={toggleDropdownSellTiming}
+                        readOnly // Prevents typing
+                        value={selectedOptionSellTiming || ''}
+                      />
+                      <div
+                        style={{
+                          position: 'absolute',
+                          right: '10px',
+                          top: '50%',
+                          transform: 'translateY(-50%)',
+                          cursor: 'pointer',
+                        }}
+                        onClick={toggleDropdownSellTiming}
+                      >
+                        {/* Dropdown icon */}
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          className="bi bi-caret-down-fill"
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M8 11.225l-4.408-5.15C3.242 5.705 3.74 5 4.527 5h6.946c.787 0 1.285.705.935 1.075L8 11.225z" />
+                        </svg>
+                      </div>
+                    </div>
+                    {isDropdownOpenSellTiming && (
+                      <div
+                        style={{
+                          position: 'absolute',
+                          top: 'calc(100% + 5px)',
+                          left: 0,
+                          backgroundColor: 'rgba(234, 235, 243, 0.8)',
+                          width: '100%',
+                          padding: '5px',
+                          borderRadius: '5px',
+                          zIndex: 1,
+                        }}
+                      >
+                        {/* Dropdown content */}
+                        <ul >
+                          <li style={{ textAlign: 'center', marginTop: '5px' }} onClick={() => handleOptionClickSellTiming('Within a week')}> Immediately</li>
+                          <li style={{ textAlign: 'center', marginTop: '5px' }} onClick={() => handleOptionClickSellTiming('Within a month')}> 1-3 months</li>
+                          <li style={{ textAlign: 'center', marginTop: '5px' }} onClick={() => handleOptionClickSellTiming('Within three months')}> 3-6 minths</li>
+                          <li style={{ textAlign: 'center', marginTop: '5px' }} onClick={() => handleOptionClickSellTiming('not sure')}> not sure</li>
+
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                  <input
+                    type="text"
+                    style={{ backgroundColor: "rgba(234, 235, 243, 0.8)" }}
+                    className="!text-gray-800 cursor-pointer font-medium font-montserrat leading-[normal] rounded-lg text-[13.84px] text-center w-full"
+                    placeholder="Is there anything else you'd like to tell us?"
+                    onChange={(e) => setExtraInfo(e.target.value)}
+                    value={extraInfo || ''}
+                  />
                   {/* Button to go back to the first form */}
                   <Button
                     className="cursor-pointer font-gilroybold leading-[normal] rounded-lg text-[17.3px] text-center tracking-[0.69px] w-[151px]"
@@ -432,7 +533,7 @@ const DesktopOneStackrectangleten = (props) => {
                     size="xs"
                     variant="fill"
                     onClick={handleBack}
-                    style={{width:'100%'}}
+                    style={{ width: '100%' }}
 
                   >
                     Back
@@ -445,8 +546,8 @@ const DesktopOneStackrectangleten = (props) => {
                 color="light_blue_800"
                 size="xs"
                 variant="fill"
-                onClick={handleNext}
-                style={{width:'100%'}}
+                onClick={formIndex === 0 ? handleNext : addLead}
+                style={{ width: '100%' }}
               >
                 {formIndex === 0 ? props?.nextbutton : "GET MY FAIR CASH OFFER!"}
               </Button>
@@ -475,7 +576,7 @@ const DesktopOneStackrectangleten = (props) => {
 
 DesktopOneStackrectangleten.defaultProps = {
   sellmyhousetext: "Sell My House Fast For Cash!",
-  propertyaddressbutton: "Property Address",
+  propertyaddressbutton: "Property address",
   phonebutton: "Phone",
   emailbutton: "Email",
   nextbutton: "Next",
