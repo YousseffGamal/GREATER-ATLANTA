@@ -111,7 +111,7 @@ const DesktopOneStackrectangleten = (props) => {
       ]
     }
     try {
-      const response = await fetch('http://localhost:3000/api/lead', {
+      const response = await fetch('https://api.greateratlhomebuyers.com/api/lead', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
