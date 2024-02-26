@@ -365,7 +365,7 @@ const DesktopOnePage = () => {
                           </Text>
                           <Img
                             className="h-[25px] w-[161px]"
-                            src="images/img_group12.png"
+                            src="images/img_group12.svg"
                             alt="groupTwelve"
                           />
                         </div>
@@ -400,7 +400,7 @@ const DesktopOnePage = () => {
                           </Text>
                           <Img
                             className="h-[25px] w-[161px]"
-                            src="images/img_group12.png"
+                            src="images/img_group12.svg"
                             alt="groupTwelve"
                           />
                           <div className="flex flex-col font-gilroyregular items-center justify-start pt-[8.84px] w-auto">
@@ -427,7 +427,7 @@ const DesktopOnePage = () => {
                           </Text>
                           <Img
                             className="h-[25px] w-[161px]"
-                            src="images/img_group12.png"
+                            src="images/img_group12.svg"
                             alt="groupTwelve"
                           />
                           <div className="flex flex-col font-gilroyregular items-center justify-start pt-[8.84px] w-auto">
