@@ -63,10 +63,10 @@ body{
      
     }
     .text-first{
-        font-size: 35px !important;
+        font-size: 25px !important;
     }
     .text-second{
-        font-size: 15px !important;
+        font-size: 10px !important;
        white-space: wrap;
     }
     .iiframee{
@@ -86,8 +86,10 @@ body{
     .dsads{
         margin-bottom: 200px;
     }
-    .top .go{
-        width: 100% !important;
+    .top .go {
+        width:100% !important;
+        object-fit: cover !important;
+
         
                 }
                 .framee{

@@ -8,10 +8,10 @@ const DesktopOnePage = () => {
 
   return (
     <>
-      <div className="top bg-gradient  flex flex-col font-montserrat items-center justify-start mx-auto w-full">
-        <div className="  flex flex-col md:px-5 relative w-full">
-          <div className="h-[846px] mx-auto w-full ">
-            <div className="h-[846px] m-auto w-full relative">
+      <div style={{width:'100%'}} className="top bg-gradient  flex flex-col font-montserrat items-center justify-start mx-auto w-full">
+        <div style={{width:'100%'}} className="  flex flex-col md:px-5 relative w-full">
+          <div style={{width:'100%'}} className="h-[846px] mx-auto w-full ">
+            <div style={{width:'100%'}} className="h-[846px] m-auto w-full relative">
               <Img
                 className="go h-[846px] m-auto object-cover w-full"
                 src="images/img_1084crestmontafter.png"
