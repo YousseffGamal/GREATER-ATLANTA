@@ -13,149 +13,101 @@
 
 }
 
-
-@media (max-width: 550px) {
-.sm\:ml-\[46px\] {
-    margin-left: -145px !important;
-}
-.fff{
+.md\:left-\[258px\] {
     position: relative !important;
-    top: 600px !important;
+top: 10px !important;
 }
+
+
+.md\:left-\[263px\] {
+    position: relative !important;
+top: 10px !important;
 }
-.sm\:text-4xl {
-    margin-bottom: 50px;
+body{
+    background-color: #d2d8de;
+}
+.bg-gradient1 {
+    background-image: none !important;
 }
 
 .text-container {
     white-space: nowrap;
   }
   
-  @media (max-width: 640px) {
+  @media screen and (max-width: 768px) {
     .text-container {
-      white-space: wrap; /* Reset white space for smaller screens */
+        white-space: normal;
     }
-.footer{
-   margin-bottom: 500px;
-   top: 100px;
-    position: relative;
-    
-}
-.footer .img-tp{
-    position: relative;
-    bottom: 350px;
-}
-.text-container{
-    position: relative;
-    bottom: 350px;
-}
-.social-items{
-    position: relative;
-    bottom: 350px;  
-}
-.ra2y{
-    position: relative;
-    bottom: 160px;
-}
-.ra2yy{
-    position: relative;
-    bottom: 300px;
-}
-.ra2yyy{
-    position: relative;
-    bottom: 290px; 
-}
-.contact{
-    position: relative;
-    top: 590px;
-}
-.testemonials{
-    position: relative;
-    top: 250px;
-}
-.services{
-    position: relative;
-    top: 300px
-}
-.imagess{
-    position: relative;
-    top:-350px !important; 
-}
-.sm\:text-\[34px\] {
-    position: relative;
-    top: 300px !important;
-}
-
-.sm\:text-\[41\.33px\] {
-    font-size: 32.33px;
-}
-.text-first{
-    position: absolute;
-margin-top: 40px !important;
-    font-size: 25.33px !important;
-}
-.text-second{
-    position: absolute !important;
- right: 40px;
- margin-top: 110px !important;
-
- font-size: 15.33px !important;
-
- }
- .sm\:text-\[16\.1px\] {
-    font-size: 10.1px;
-    white-space: nowrap; /* Reset white space for smaller screens */
-
-}
-
-  }
-
-  .text-\[55\.33px\] {
-    font-size: 55.33px;
-    z-index: 9999 !important;
-margin-top: 150px;
-
-}
-.text-\[20\.1px\] {
-    z-index: 9999 !important;
-    font-size: 20.1px;
-    margin-top: 300px;
+    .ra2y {
+        position: static; /* Reset position for smaller screens */
+        left: auto !important; /* Reset right property for smaller screens */
+        margin-right: auto !important;
+    }
+    .ra2yy{
+        position: static; /* Reset position for smaller screens */
+        left: auto !important; /* Reset right property for smaller screens */
+    }
+    .ra2yyy{
+        position: static; /* Reset position for smaller screens */
+        left: auto !important; /* Reset right property for smaller screens */
+    }
   
-}
-
-
-@media (max-width: 1050px) {
-    .md\:left-\[258px\] {
-        left: 58px !important;
+    .sss{
+        width: 100% !important;
     }
-    
+    .yaaa{
+      margin-top: 200px !important;
+    }
+    .md\:left-\[258px\]{
+        margin-bottom: 320px !important;
+     
+    }
+    .text-first{
+        font-size: 35px !important;
+    }
+    .text-second{
+        font-size: 15px !important;
+       white-space: wrap;
+    }
+    .iiframee{
+       margin-right: auto;
+       margin-left: auto;
+        max-width: 70%;
+        width: auto !important;
+        max-height: 100% !important;
+        height: 300px !important;
+    }
+    .iiframe{
+        height: 100% !important;
+    }
+    .what-we-do{
+        margin-top: 150px;
+    }
+    .dsads{
+        margin-bottom: 200px;
+    }
+    .top .go{
+        width: 100% !important;
+        
+                }
+ 
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1023px) {    
+    .iiframee{
+        margin-right: auto;
+        margin-left: auto;
+         max-width: 100%;
+         width: 60% !important;
+         max-height: 100% !important;
+         height: 400px !important;
+     }
+     .iiframe{
+         height: 100% !important;
+     }
+     .what-we-do{
+        margin-top: 150px;
     }
 
 
-    @media (max-width: 550px) {
-.iiframe {
-    height: 300px !important;
-    overflow: hidden !important;
-}
-}
-
-
-@media (max-width: 550px){
-.sm\:bottom-\[50px\] {
-    bottom: 4px !important;
-}
-}
-@media (max-width: 1050px) {
-.md\:gap-10 {
-    gap: 2.5rem;
-   position: relative;
-   top: 160px;
-}
-
-}
-
-@media (max-width: 1050px) {
-.md\:top-\[50px\] {
-    top: -270px !important;
-}
 }

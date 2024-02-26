@@ -8,7 +8,7 @@ const DesktopOnePage = () => {
 
   return (
     <>
-      <div className="bg-gradient  flex flex-col font-montserrat items-center justify-start mx-auto w-full">
+      <div className="top bg-gradient  flex flex-col font-montserrat items-center justify-start mx-auto w-full">
         <div className="  flex flex-col md:px-5 relative w-full">
           <div className="h-[846px] mx-auto w-full ">
             <div className="h-[846px] m-auto w-full relative">
@@ -18,7 +18,7 @@ const DesktopOnePage = () => {
                 alt="1084crestmontaf"
               />
               <div className="absolute bg-gradient1 flex flex-col h-max inset-y-[0] items-start justify-start left-[0] my-auto p-[131px] md:px-10 sm:px-5 w-[61%]">
-                <div className=" flex flex-col gap-3.5 items-start justify-start my-[148px] w-auto sm:w-full">
+                <div className="hhhhhhhh flex flex-col gap-3.5 items-start justify-start my-[148px] w-auto sm:w-full">
                   <Text
                     className="text-first md:left-[263px] absolute sm:text-[41.33px] md:text-[47.33px] text-[55.33px] text-gray-900"
                     size="txtGilroyBold5533"
@@ -63,11 +63,11 @@ const DesktopOnePage = () => {
             </div>
           </div>
           <div className="flex flex-col md:gap-10 gap-28 items-end justify-start mt-[-626px] mx-auto w-auto z-[1]">
-            <DesktopOneStackrectangleten className="pb-[135px] relative rounded-[25px] w-[624px] md:w-full" />
+            <DesktopOneStackrectangleten className="yaaa pb-[135px] relative rounded-[25px] w-[624px] md:w-full" />
             <div className="flex flex-col font-gilroybold md:gap-10 gap-[105px] items-center justify-start w-full">
               <div className="flex flex-col gap-[34px] items-center justify-start w-[79%] md:w-full">
-                <Text
-                  className="md:relative sm:text-4xl md:text-[38px] text-[40px] text-center text-gray-900 md:top-[50px]"
+                <Text 
+                  className="dsads md:relative sm:text-4xl md:text-[38px] text-[40px] text-center text-gray-900 md:top-[50px]"
                   size="txtGilroyBold40"
                 >
                   Recent Properties
@@ -82,29 +82,28 @@ const DesktopOnePage = () => {
                     <div className="flex flex-col md:gap-10 gap-[70px] items-center justify-start w-full">
                       <div className="flex flex-col items-center justify-start w-full">
                         <div className="md:gap-5 gap-[70px] grid md:grid-cols-1 grid-cols-2 justify-center min-h-[auto] w-full">
-                          <div className="bg-indigo-50 flex flex-1 flex-col gap-[23px] h-[390px] md:h-auto items-center justify-start rounded-[30px] shadow-bs1 w-full">
+                          <div className="iiframee bg-indigo-50 flex flex-1 flex-col gap-[23px] h-[390px] md:h-auto items-center justify-start rounded-[30px] shadow-bs1 w-full">
                             <iframe frameBorder="0" className="iiframe juxtapose h-[312px] sm:h-auto object-cover rounded-tl-[30px] rounded-tr-[30px] w-[416px] md:w-full" width="100%" height="100%" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=f98a6578-b980-11ee-9ddd-3f41531135b6"></iframe>
                             <Text className="text-2xl md:text-[22px] text-black-900 sm:text-xl w-auto" size="txtGilroyMedium24">
                               Crestmont Lane
                             </Text>
                           </div>
-
-                          <div className="bg-indigo-50 flex flex-1 flex-col gap-[23px] h-[390px] md:h-auto items-center justify-start rounded-[30px] shadow-bs1 w-full">
-                            <iframe
-                              frameBorder="0"
-                              className="iiframe h-[312px] sm:h-auto object-cover rounded-tl-[30px] rounded-tr-[30px] w-[416px] md:w-full"
-                              width="100%"
-                              height="312px"
-                              src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=9133ca7c-b981-11ee-9ddd-3f41531135b6"
-                            ></iframe>
-                            <Text
-                              className="text-2xl md:text-[22px] text-black-900 sm:text-xl w-auto"
-                              size="txtGilroyMedium24"
-                            >
-                              Arbor Gate
-                            </Text>
-                          </div>
-                          <div className="bg-indigo-50 flex flex-1 flex-col gap-[23px] h-[390px] md:h-auto items-center justify-start rounded-[30px] shadow-bs1 w-full">
+                          <div className="iiframee bg-indigo-50 flex flex-1 flex-col gap-[23px] h-[390px] md:h-auto items-center justify-start rounded-[30px] shadow-bs1 w-full" style={{ maxHeight: '390px', overflow: 'hidden' }}>
+  <iframe
+    frameBorder="0"
+    className="iiframe h-[312px] sm:h-auto object-cover rounded-tl-[30px] rounded-tr-[30px] w-[416px] md:w-full"
+    width="100%"
+    height="312px"
+    src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=9133ca7c-b981-11ee-9ddd-3f41531135b6"
+  ></iframe>
+  <Text
+    className="text-2xl md:text-[22px] text-black-900 sm:text-xl w-auto"
+    size="txtGilroyMedium24"
+  >
+    Arbor Gate
+  </Text>
+</div>
+                          <div className="iiframee bg-indigo-50 flex flex-1 flex-col gap-[23px] h-[390px] md:h-auto items-center justify-start rounded-[30px] shadow-bs1 w-full">
                             <iframe
                               frameBorder="0"
                               className="iiframe  h-[400px] sm:h-auto object-cover rounded-tl-[30px] rounded-tr-[30px] w-[416px] md:w-full"
@@ -121,7 +120,7 @@ const DesktopOnePage = () => {
                           </div>
 
 
-                          <div className="bg-indigo-50 flex flex-1 flex-col gap-[23px] h-[390px] md:h-auto items-center justify-start rounded-[30px] shadow-bs1 w-full">
+                          <div className="iiframee bg-indigo-50 flex flex-1 flex-col gap-[23px] h-[390px] md:h-auto items-center justify-start rounded-[30px] shadow-bs1 w-full">
                             <iframe
                               frameBorder="0"
                               className="iiframe h-[312px] sm:h-auto object-cover rounded-tl-[30px] rounded-tr-[30px] w-[416px] md:w-full"
@@ -139,10 +138,10 @@ const DesktopOnePage = () => {
 
                         </div>
                       </div>
-                      <div className="bg-indigo-50 flex flex-col gap-[23px] md:h-[312px] h-[390px] sm:h-auto items-center justify-start rounded-[30px] shadow-bs1 w-auto md:w-full">
+                      <div className="iiframee bg-indigo-50 flex flex-col gap-[23px] md:h-[312px] h-[390px] sm:h-auto items-center justify-start rounded-[30px] shadow-bs1 w-auto md:w-full">
 
-                        <iframe frameBorder="0" className="iiframe h-[312px] sm:h-auto object-cover rounded-tl-[30px] rounded-tr-[30px] md:w-[101%] w-[416px] sm:w-full juxtapose" width="100%" height="605" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=bb33f75c-b981-11ee-9ddd-3f41531135b6"></iframe>
-                        <Text
+                        <iframe frameBorder="0" className="iiframe deds h-[312px] sm:h-auto object-cover rounded-tl-[30px] rounded-tr-[30px] md:w-[101%] w-[416px] sm:w-full juxtapose" width="100%" height="605" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=bb33f75c-b981-11ee-9ddd-3f41531135b6"></iframe>
+                        <Text id="ehhhhhhhhhh"
                           className="text-2xl md:text-[22px] text-black-900 sm:text-xl w-auto"
                           size="txtGilroyMedium24"
                         >
@@ -153,7 +152,7 @@ const DesktopOnePage = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col items-center justify-start w-full">
+              <div className="what-we-do flex flex-col items-center justify-start w-full">
                 <div className="flex flex-col gap-[35px] items-center justify-start w-auto md:w-full">
                   <Text
                     className=" fff md:text-4xl sm:text-[34px] text-[38px] text-black-900 text-center w-auto"
@@ -366,7 +365,7 @@ const DesktopOnePage = () => {
                           </Text>
                           <Img
                             className="h-[25px] w-[161px]"
-                            src="images/img_group12.svg"
+                            src="images/img_group12.png"
                             alt="groupTwelve"
                           />
                         </div>
@@ -401,7 +400,7 @@ const DesktopOnePage = () => {
                           </Text>
                           <Img
                             className="h-[25px] w-[161px]"
-                            src="images/img_group12.svg"
+                            src="images/img_group12.png"
                             alt="groupTwelve"
                           />
                           <div className="flex flex-col font-gilroyregular items-center justify-start pt-[8.84px] w-auto">
@@ -428,7 +427,7 @@ const DesktopOnePage = () => {
                           </Text>
                           <Img
                             className="h-[25px] w-[161px]"
-                            src="images/img_group12.svg"
+                            src="images/img_group12.png"
                             alt="groupTwelve"
                           />
                           <div className="flex flex-col font-gilroyregular items-center justify-start pt-[8.84px] w-auto">
@@ -525,7 +524,7 @@ const DesktopOnePage = () => {
                         <div className="flex flex-col items-start justify-start w-auto sm:w-full">
                           <div className="text-container">
                             <Text
-                              className="text-[17px] text-white-A700"
+                              className="footer-tt text-[17px] text-white-A700"
                               size="txtGilroyRegular17"
                             >
                               <>
@@ -574,7 +573,7 @@ const DesktopOnePage = () => {
                       </div>
                     </div>
                     <Text
-                      className="text-base text-center text-white-A700 w-auto"
+                      className="copy text-base text-center text-white-A700 w-auto"
                       size="txtGilroyLight16"
                     >
                       ©2022 Greater Atlanta Home Buyers, LLC
