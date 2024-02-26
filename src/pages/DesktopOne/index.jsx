@@ -74,7 +74,7 @@ const DesktopOnePage = () => {
                 </Text>
                 <div className="font-gilroymedium sm:h-[1309px] h-[1324px] md:h-[1925px] relative w-full">
                   <Img
-                    className="absolute h-[1309px] inset-[0] m-auto w-[922px]"
+                    className="framee absolute h-[1309px] inset-[0] m-auto w-[922px]"
                     src="images/img_frame52.svg"
                     alt="frameFiftyTwo"
                   />
@@ -409,11 +409,11 @@ const DesktopOnePage = () => {
                               size="txtGilroyRegular1415"
                             >
                               <>
-                                Dan is a fabulous rehabber!
-                                <br />
-                                His renovations are a work ofart that
-                                <br />
-                                reflect his commitment to quality!
+                                Dan is a fabulous rehabber! <br />
+                             
+                                His renovations are a work ofart  <br />
+                           
+                                that reflect his commitment to quality!
                               </>
                             </Text>
                           </div>
