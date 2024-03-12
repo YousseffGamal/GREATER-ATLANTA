@@ -19,10 +19,10 @@ const DesktopOnePage = () => {
   };
   return (
     <>
-      <div style={{width:'100%'}} className="top bg-gradient  flex flex-col font-montserrat items-center justify-start mx-auto w-full">
-        <div style={{width:'100%'}} className="  flex flex-col md:px-5 relative w-full">
-          <div style={{width:'100%'}} className="h-[846px] mx-auto w-full ">
-            <div style={{width:'100%'}} className="h-[846px] m-auto w-full relative">
+      <div style={{ width: '100%' }} className="top bg-gradient  flex flex-col font-montserrat items-center justify-start mx-auto w-full">
+        <div style={{ width: '100%' }} className="  flex flex-col md:px-5 relative w-full">
+          <div style={{ width: '100%' }} className="h-[846px] mx-auto w-full ">
+            <div style={{ width: '100%' }} className="h-[846px] m-auto w-full relative">
               <Img
                 className="go h-[846px] m-auto object-cover w-full"
                 src="images/img_1084crestmontafter.png"
@@ -77,7 +77,7 @@ const DesktopOnePage = () => {
             <DesktopOneStackrectangleten className="yaaa pb-[135px] relative rounded-[25px] w-[624px] md:w-full" />
             <div className="flex flex-col font-gilroybold md:gap-10 gap-[105px] items-center justify-start w-full">
               <div className="flex flex-col gap-[34px] items-center justify-start w-[79%] md:w-full">
-                <Text 
+                <Text
                   className="dsads md:relative sm:text-4xl md:text-[38px] text-[40px] text-center text-gray-900 md:top-[50px]"
                   size="txtGilroyBold40"
                 >
@@ -100,20 +100,20 @@ const DesktopOnePage = () => {
                             </Text>
                           </div>
                           <div className="iiframee bg-indigo-50 flex flex-1 flex-col gap-[23px] h-[390px] md:h-auto items-center justify-start rounded-[30px] shadow-bs1 w-full" style={{ maxHeight: '390px', overflow: 'hidden' }}>
-  <iframe
-    frameBorder="0"
-    className="iiframe h-[312px] sm:h-auto object-cover rounded-tl-[30px] rounded-tr-[30px] w-[416px] md:w-full"
-    width="100%"
-    height="312px"
-    src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=9133ca7c-b981-11ee-9ddd-3f41531135b6"
-  ></iframe>
-  <Text
-    className="text-2xl md:text-[22px] text-black-900 sm:text-xl w-auto"
-    size="txtGilroyMedium24"
-  >
-    Arbor Gate
-  </Text>
-</div>
+                            <iframe
+                              frameBorder="0"
+                              className="iiframe h-[312px] sm:h-auto object-cover rounded-tl-[30px] rounded-tr-[30px] w-[416px] md:w-full"
+                              width="100%"
+                              height="312px"
+                              src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=9133ca7c-b981-11ee-9ddd-3f41531135b6"
+                            ></iframe>
+                            <Text
+                              className="text-2xl md:text-[22px] text-black-900 sm:text-xl w-auto"
+                              size="txtGilroyMedium24"
+                            >
+                              Arbor Gate
+                            </Text>
+                          </div>
                           <div className="iiframee bg-indigo-50 flex flex-1 flex-col gap-[23px] h-[390px] md:h-auto items-center justify-start rounded-[30px] shadow-bs1 w-full">
                             <iframe
                               frameBorder="0"
@@ -421,9 +421,9 @@ const DesktopOnePage = () => {
                             >
                               <>
                                 Dan is a fabulous rehabber! <br />
-                             
+
                                 His renovations are a work ofart  <br />
-                           
+
                                 that reflect his commitment to quality!
                               </>
                             </Text>
@@ -551,24 +551,24 @@ const DesktopOnePage = () => {
                                 charge a commission; & we pay all normal closing
                                 costs.
                                 <br />
-                                <a style={{ textDecoration: 'underline',cursor:'pointer' }} onClick={handleTermsClick}>
-              terms and conditions
-            </a>
+                                {/* <a style={{ textDecoration: 'underline', cursor: 'pointer' }} onClick={handleTermsClick}>
+                                  terms and conditions
+                                </a> */}
                               </>
                             </Text>
                             <Modal
-        title="Terms and Conditions"
-        visible={modalVisible}
-        onCancel={handleModalCancel}
-        footer={null}
-        className="custom-modal" // Added custom class for modal
-      >
-        <ul>
-          <li>You will need to add this page to your website and make sure it is publicly available.</li>
-          <li>Twilio, our telephony partner, maintains that consent can't be sold, shared, or transferred, so you must include ToS or a privacy policy stipulating that their data will not be shared.</li>
-          <li>Please reply to this email with the ToS URL so we can resubmit your application. Make sure they are easily findable from the Footer of your website homepage.</li>
-        </ul>
-      </Modal>
+                              title="Terms and Conditions"
+                              open={modalVisible}
+                              onCancel={handleModalCancel}
+                              footer={null}
+                              className="custom-modal"
+                            >
+                              <ul>
+                                <li>You will need to add this page to your website and make sure it is publicly available.</li>
+                                <li>Twilio, our telephony partner, maintains that consent can't be sold, shared, or transferred, so you must include ToS or a privacy policy stipulating that their data will not be shared.</li>
+                                <li>Please reply to this email with the ToS URL so we can resubmit your application. Make sure they are easily findable from the Footer of your website homepage.</li>
+                              </ul>
+                            </Modal>
                           </div>
                         </div>
                         <div className="social-items flex sm:flex-col flex-row gap-[30px] items-center justify-start w-auto sm:w-full">
