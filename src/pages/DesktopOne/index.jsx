@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useState } from 'react';
 
 import { Button, Img, List, Text } from "components";
 import DesktopOneStackrectangleten from "components/DesktopOneStackrectangleten";
 import './style.css'
+import { Modal, Typography } from 'antd';
+const { Text: AntdText } = Typography; // Rename 'Text' to 'AntdText'
+
 const DesktopOnePage = () => {
 
+  const [modalVisible, setModalVisible] = useState(false);
 
+  const handleTermsClick = () => {
+    setModalVisible(true);
+  };
+
+  const handleModalCancel = () => {
+    setModalVisible(false);
+  };
   return (
     <>
       <div style={{width:'100%'}} className="top bg-gradient  flex flex-col font-montserrat items-center justify-start mx-auto w-full">
@@ -539,8 +550,25 @@ const DesktopOnePage = () => {
                                 <br />
                                 charge a commission; & we pay all normal closing
                                 costs.
+                                <br />
+                                <a style={{ textDecoration: 'underline',cursor:'pointer' }} onClick={handleTermsClick}>
+              terms and conditions
+            </a>
                               </>
                             </Text>
+                            <Modal
+        title="Terms and Conditions"
+        visible={modalVisible}
+        onCancel={handleModalCancel}
+        footer={null}
+        className="custom-modal" // Added custom class for modal
+      >
+        <ul>
+          <li>You will need to add this page to your website and make sure it is publicly available.</li>
+          <li>Twilio, our telephony partner, maintains that consent can't be sold, shared, or transferred, so you must include ToS or a privacy policy stipulating that their data will not be shared.</li>
+          <li>Please reply to this email with the ToS URL so we can resubmit your application. Make sure they are easily findable from the Footer of your website homepage.</li>
+        </ul>
+      </Modal>
                           </div>
                         </div>
                         <div className="social-items flex sm:flex-col flex-row gap-[30px] items-center justify-start w-auto sm:w-full">

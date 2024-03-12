@@ -22,3 +22,12 @@
     min-width: 308px !important;
 }
 }
+
+.custom-checkbox .ant-checkbox-inner {
+    background-color: transparent;
+  
+  }
+  .custom-checkbox .ant-checkbox-checked .ant-checkbox-inner::after {
+    border-color: #abb4b9; /* Change the color of the checkmark (arrow) */
+   
+  }

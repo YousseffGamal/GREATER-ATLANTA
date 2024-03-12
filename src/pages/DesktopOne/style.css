@@ -116,3 +116,45 @@ body{
 
 
 }
+
+
+/* Add custom styles for the modal */
+.custom-modal {
+    width: 90% !important; /* Change the width as per your requirement */
+    max-width: 900px !important; /* Add a maximum width to ensure it doesn't become too wide on larger screens */
+  }
+  
+  /* Style the modal content */
+  .custom-modal .ant-modal-content {
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  /* Style the modal title */
+  .custom-modal .ant-modal-title {
+    color: #1890ff; /* Example color */
+    font-size: 20px;
+  }
+  
+  /* Style the modal body */
+  .custom-modal .ant-modal-body {
+    padding: 20px 0;
+  }
+  
+  /* Style the modal footer */
+  .custom-modal .ant-modal-footer {
+    display: none; /* Hide the footer */
+  }
+  
+  /* Style the unordered list inside the modal */
+  .custom-modal ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  /* Style the list items inside the modal */
+  .custom-modal li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  

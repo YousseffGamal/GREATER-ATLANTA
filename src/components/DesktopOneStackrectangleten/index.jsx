@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Button, Img, Text } from "components";
 import './style.css'
+import { Checkbox } from 'antd';
+
 const DesktopOneStackrectangleten = (props) => {
   const [propertyAddress, setPropertyAddress] = useState("");
   const [phone, setPhone] = useState("");
@@ -553,11 +555,8 @@ const DesktopOneStackrectangleten = (props) => {
               </Button>
               <div className="flex sm:flex-col flex-row gap-[12.97px] items-center justify-center pb-[4.32px] w-full">
                 <div className="flex flex-col h-[19px] md:h-auto items-center justify-center outline outline-[0.5px] outline-gray-800_01 p-[4.32px] rounded w-[19px]">
-                  <Img
-                    className="h-[9px] w-[11px]"
-                    src="images/img_checkmark.svg"
-                    alt="checkmark"
-                  />
+                <Checkbox  className="custom-checkbox h-[9px] w-[16px]" />
+
                 </div>
                 <Text
                   className="max-w-[481px] md:max-w-full text-[12.11px] text-gray-800_02 tracking-[0.48px]"
