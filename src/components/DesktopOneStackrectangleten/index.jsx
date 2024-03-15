@@ -163,7 +163,11 @@ const DesktopOneStackrectangleten = (props) => {
     }
   };
 
+  const [isChecked, setIsChecked] = useState(true);
 
+  const handleCheckboxChange = (e) => {
+    setIsChecked(e.target.checked);
+  };
   return (
     <>
       <div className={props.className}>
@@ -555,7 +559,11 @@ const DesktopOneStackrectangleten = (props) => {
               </Button>
               <div className="flex sm:flex-col flex-row gap-[12.97px] items-center justify-center pb-[4.32px] w-full">
                 <div className="flex flex-col h-[19px] md:h-auto items-center justify-center outline outline-[0.5px] outline-gray-800_01 p-[4.32px] rounded w-[19px]">
-                <Checkbox  className="custom-checkbox h-[9px] w-[16px]" />
+                <Checkbox
+        className="custom-checkbox"
+        checked={isChecked}
+        onChange={handleCheckboxChange}
+      />
 
                 </div>
                 <Text
