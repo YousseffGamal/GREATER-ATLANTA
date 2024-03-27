@@ -2,7 +2,9 @@ import React, { useState, useRef, useEffect } from "react";
 import { Button, Img, Text } from "components";
 import './style.css'
 import { Checkbox } from 'antd';
-
+const handleTermsClick = () => {
+  window.location.href = '/terms'; 
+};
 const DesktopOneStackrectangleten = (props) => {
   const [propertyAddress, setPropertyAddress] = useState("");
   const [phone, setPhone] = useState("");
@@ -596,6 +598,8 @@ DesktopOneStackrectangleten.defaultProps = {
       certify that you
       <br />
       are the owner of the contact information provided.
+      <br />
+      <button style={{fontWeight:"bold"}} onClick={handleTermsClick}>terms and conditions </button>
     </>
   ),
 };

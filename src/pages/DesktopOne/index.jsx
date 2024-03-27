@@ -4,6 +4,7 @@ import { Button, Img, List, Text } from "components";
 import DesktopOneStackrectangleten from "components/DesktopOneStackrectangleten";
 import './style.css'
 import { Modal, Typography } from 'antd';
+import TermsAndConditions from 'pages/termsAndConditions/termsAndConditions';
 const { Text: AntdText } = Typography; // Rename 'Text' to 'AntdText'
 
 const DesktopOnePage = () => {
@@ -551,9 +552,9 @@ const DesktopOnePage = () => {
                                 charge a commission; & we pay all normal closing
                                 costs.
                                 <br />
-                                {/* <a style={{ textDecoration: 'underline', cursor: 'pointer' }} onClick={handleTermsClick}>
+                                <a style={{ textDecoration: 'underline', cursor: 'pointer' }} onClick={handleTermsClick}>
                                   terms and conditions
-                                </a> */}
+                                </a>
                               </>
                             </Text>
                             <Modal
@@ -563,11 +564,7 @@ const DesktopOnePage = () => {
                               footer={null}
                               className="custom-modal"
                             >
-                              <ul>
-                                <li>You will need to add this page to your website and make sure it is publicly available.</li>
-                                <li>Twilio, our telephony partner, maintains that consent can't be sold, shared, or transferred, so you must include ToS or a privacy policy stipulating that their data will not be shared.</li>
-                                <li>Please reply to this email with the ToS URL so we can resubmit your application. Make sure they are easily findable from the Footer of your website homepage.</li>
-                              </ul>
+                              <TermsAndConditions/>
                             </Modal>
                           </div>
                         </div>
