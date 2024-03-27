@@ -563,8 +563,11 @@ const DesktopOnePage = () => {
                               onCancel={handleModalCancel}
                               footer={null}
                               className="custom-modal"
+                              style={{
+                                top: 20,
+                              }}
                             >
-                              <TermsAndConditions/>
+                              <TermsAndConditions />
                             </Modal>
                           </div>
                         </div>
