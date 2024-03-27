@@ -3,7 +3,7 @@ import { Button, Img, Text } from "components";
 import './style.css'
 import { Checkbox } from 'antd';
 const handleTermsClick = () => {
-  window.location.href = '/terms'; 
+  window.location.href = '/terms';
 };
 const DesktopOneStackrectangleten = (props) => {
   const [propertyAddress, setPropertyAddress] = useState("");
@@ -561,11 +561,11 @@ const DesktopOneStackrectangleten = (props) => {
               </Button>
               <div className="flex sm:flex-col flex-row gap-[12.97px] items-center justify-center pb-[4.32px] w-full">
                 <div className="flex flex-col h-[19px] md:h-auto items-center justify-center outline outline-[0.5px] outline-gray-800_01 p-[4.32px] rounded w-[19px]">
-                <Checkbox
-        className="custom-checkbox"
-        checked={isChecked}
-        onChange={handleCheckboxChange}
-      />
+                  <Checkbox
+                    className="custom-checkbox"
+                    checked={isChecked}
+                    onChange={handleCheckboxChange}
+                  />
 
                 </div>
                 <Text
@@ -599,7 +599,7 @@ DesktopOneStackrectangleten.defaultProps = {
       <br />
       are the owner of the contact information provided.
       <br />
-      <button style={{fontWeight:"bold"}} onClick={handleTermsClick}>terms and conditions </button>
+      <a style={{ fontWeight: "bold", textDecoration: "none" }} href="/terms">terms and conditions </a>
     </>
   ),
 };
