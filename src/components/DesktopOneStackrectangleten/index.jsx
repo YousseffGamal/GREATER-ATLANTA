@@ -122,6 +122,9 @@ const DesktopOneStackrectangleten = (props) => {
         },
         body: JSON.stringify(lead)
       })
+      console.log(lead);
+      console.log(response);
+      
       if (response.ok === true) {
         alert('Your data has been submitted successfully!');
         setFirstName('');
@@ -440,10 +443,10 @@ const DesktopOneStackrectangleten = (props) => {
                       >
                         {/* Dropdown content */}
                         <ul >
-                          <li style={{ textAlign: 'center', marginTop: '5px' }} onClick={() => handleOptionClickCondition('New')}> Its needs a lot of work</li>
-                          <li style={{ textAlign: 'center', marginTop: '5px' }} onClick={() => handleOptionClickCondition('Used')}> it needs some work</li>
-                          <li style={{ textAlign: 'center', marginTop: '5px' }} onClick={() => handleOptionClickCondition('Refurbished')}> it's in good condition</li>
-                          <li style={{ textAlign: 'center', marginTop: '5px' }} onClick={() => handleOptionClickCondition('great')}> it's in great condition</li>
+                          <li style={{ textAlign: 'center', marginTop: '5px' }} onClick={() => handleOptionClickCondition('Its needs a lot of work')}> Its needs a lot of work</li>
+                          <li style={{ textAlign: 'center', marginTop: '5px' }} onClick={() => handleOptionClickCondition('it needs some work')}> it needs some work</li>
+                          <li style={{ textAlign: 'center', marginTop: '5px' }} onClick={() => handleOptionClickCondition("it's in good condition")}> it's in good condition</li>
+                          <li style={{ textAlign: 'center', marginTop: '5px' }} onClick={() => handleOptionClickCondition("it's in great condition")}> it's in great condition</li>
 
                         </ul>
                       </div>
@@ -516,9 +519,9 @@ const DesktopOneStackrectangleten = (props) => {
                       >
                         {/* Dropdown content */}
                         <ul >
-                          <li style={{ textAlign: 'center', marginTop: '5px' }} onClick={() => handleOptionClickSellTiming('Within a week')}> Immediately</li>
-                          <li style={{ textAlign: 'center', marginTop: '5px' }} onClick={() => handleOptionClickSellTiming('Within a month')}> 1-3 months</li>
-                          <li style={{ textAlign: 'center', marginTop: '5px' }} onClick={() => handleOptionClickSellTiming('Within three months')}> 3-6 minths</li>
+                          <li style={{ textAlign: 'center', marginTop: '5px' }} onClick={() => handleOptionClickSellTiming('Immediately')}> Immediately</li>
+                          <li style={{ textAlign: 'center', marginTop: '5px' }} onClick={() => handleOptionClickSellTiming('1-3 months')}> 1-3 months</li>
+                          <li style={{ textAlign: 'center', marginTop: '5px' }} onClick={() => handleOptionClickSellTiming('3-6 months')}> 3-6 months</li>
                           <li style={{ textAlign: 'center', marginTop: '5px' }} onClick={() => handleOptionClickSellTiming('not sure')}> not sure</li>
 
                         </ul>
